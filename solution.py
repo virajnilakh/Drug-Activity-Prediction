@@ -72,7 +72,7 @@ f = open("ans1.dat", "w+")
 
 with open('./test.dat', 'r') as fh:
     lines = fh.readlines()
-p1c*=20
+p1c*=21
 t=p1c+p0c
 i=0
 j=0
@@ -84,7 +84,7 @@ for l in lines:
     for k,v in l.iteritems():
 
         if k in p1:
-            prob1+=log((p1[k]*20+1)/(p1c+t))
+            prob1+=log((p1[k]*21+1)/(p1c+t))
         else:
             prob1+=log((0+1)/(p1c+t))
         if prob1==0:
@@ -96,7 +96,7 @@ for l in lines:
         j+=1
         if prob0==0:
             print "prob 2 j is %d and i is %d"%(j,i)
-    prob1+=log(pone*20)
+    prob1+=log(pone*21)
     prob0+=log(pzero)
     if prob1>prob0:
         f.write("1\n")
